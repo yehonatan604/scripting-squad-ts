@@ -19,12 +19,9 @@ export class FormService {
             ...this.user,
             [id]: this.dom.formInputs[id].value
         }
-        console.log(this.dom.formInputs[id].value);
-
     }
 
     onSubmit: Function = () => {
-        console.log(this.user);
         this.authService.login(this.user);
     }
 }
